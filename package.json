@@ -1,0 +1,23 @@
+{
+  "name": "heimashangcheng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenbo121388/xiaochengxu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenbo121388/xiaochengxu/issues"
+  },
+  "homepage": "https://github.com/chenbo121388/xiaochengxu#readme",
+  "dependencies": {
+    "@escook/request-miniprogram": "^0.2.1"
+  }
+}
