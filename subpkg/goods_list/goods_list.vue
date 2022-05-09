@@ -1,6 +1,6 @@
 <template>
 	<view>
-		1233
+		133
 	</view>
 </template>
 
