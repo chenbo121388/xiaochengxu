@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="goods_list">
-			<view v-for="(good,i) in goodsList" :key="i" @click="gotoDetail(good)">
+			<view v-for="(good,i) in goodsList" :key="i">
 				<my-goods :good="good"></my-goods>
 			</view>
 		</view>
@@ -39,12 +39,12 @@
 				this.total = res.message.total
 				this.isloading = false
 				cb && cb()
-			},
-			gotoDetail(item){
-				uni.navigateTo({
-					url:'/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
-				})
 			}
+			// gotoDetail(item){
+			// 	uni.navigateTo({
+			// 		url:'/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
+			// 	})
+			// }
 		},
 		onReachBottom(){
 			if(this.queryObj.pagenum * this.queryObj.pagesize >= this.total) return uni.$showMsg('数据加载完毕！')

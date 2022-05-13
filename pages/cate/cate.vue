@@ -27,7 +27,9 @@
 </template>
 
 <script>
+	import badgeMix from '@/mixins/tabbar-badge.js'
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				wh: 0,
@@ -42,6 +44,7 @@
 			this.wh = sysInfo.windowHeight - 50
 			this.getCateList()
 		},
+
 		methods: {
 			async getCateList() {
 				const {
@@ -56,14 +59,14 @@
 				this.cateLevel2 = this.cateList[i].children
 				this.scrollTop = this.scrollTop === 0 ? 1 : 0
 			},
-			gotoGoodsList(item3){
+			gotoGoodsList(item3) {
 				uni.navigateTo({
-					url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+					url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
 				})
 			},
-			gotoSearch(){
+			gotoSearch() {
 				uni.navigateTo({
-					url:'/subpkg/search/search'
+					url: '/subpkg/search/search'
 				})
 			}
 		}
